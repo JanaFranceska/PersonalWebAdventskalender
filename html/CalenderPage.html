@@ -2,17 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
     <link href="../css/main.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../js/snow.js"></script>
+    <script src="../js/calenderDayClicked.js"></script>
+    <script src="../js/viewContent.js"></script>
     <title>Adventskalender</title>
 </head>
 <body>
+
+
 <div class="v2_115">
     <div class="v38_9">
-        <span class="v2_140">impressum</span>
-        <span class="v2_141">datenschutz</span>
-        <span class="v2_142">tips</span></div>
+<!--        <span class="v2_140">impressum</span>-->
+<!--        <span class="v2_141">datenschutz</span>-->
+<!--        <span class="v2_142">tips</span>-->
+    </div>
     <div class="v16_77">
         <div class="style_prevu_kit" id="day1"><span class="v16_102">1</span></div>
         <div class="style_prevu_kit" id="day2"><span class="v16_102">2</span></div>
@@ -40,21 +47,41 @@
         <div class="style_prevu_kit" id="day24"><span class="v16_102">24</span></div>
     </div>
     <div class="v44_6">
-        <div class="v38_29">
-            <div class="v38_30">
+<!--        <div class="v38_29">-->
+<!--            <div class="v38_30"></div>-->
+<!--            <div class="v38_31"></div>-->
+<!--            <span class="v38_27">logout</span>-->
+<!--        </div>-->
+<!--        <div class="v38_32">-->
+<!--            <div class="v38_33"></div>-->
+<!--            <div class="v38_34"></div>-->
+<!--            <div class="v38_35"></div>-->
+<!--            <span class="v38_28">settings</span>-->
+<!--        </div>-->
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="empModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">User Info</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
 
             </div>
-            <div class="v38_31"></div>
-            <span class="v38_27">logout</span>
-        </div>
-        <div class="v38_32">
-            <div class="v38_33"></div>
-            <div class="v38_34"></div>
-            <div class="v38_35"></div>
-            <span class="v38_28">settings</span>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
         </div>
     </div>
 </div>
+
+
 
 </body>
 </html>
