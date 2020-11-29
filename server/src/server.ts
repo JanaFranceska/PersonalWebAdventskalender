@@ -27,6 +27,9 @@ app.post('/adminData',(req,res) => {
         path = getPictureFilePath({clickedDayInt: clickedDayInt});
     }
 
+    const fs = require('fs');
+    const contents = fs.readFileSync(path, {encoding: 'base64'});
+
     //##This is added to reduce the warnings on client side
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -34,13 +37,13 @@ app.post('/adminData',(req,res) => {
 
     //Response:
     res.status(200);
-    //res.send(res_text);
-    res.sendFile(path, function (err) {
-        if (err) {
-            console.error(err);
-            res.status(401);
-        }
-    });
+    res.send(contents);
+    // res.sendFile(path, function (err) {
+    //     if (err) {
+    //         console.error(err);
+    //         res.status(401);
+    //     }
+    // });
 });
 
 
@@ -81,6 +84,6 @@ function clickedDayAsInt({dataClient}: { dataClient: any }) {
 }
 
 function getPictureFilePath({clickedDayInt}: { clickedDayInt: any }) {
-    return "/Users/universitat/WebstormProjects/PersonalWebAdventskalender/server/src/pictures/"+ clickedDayInt +".jpeg";
+    return "/Users/universitat/WebstormProjects/PersonalWebAdventskalender/server/src/pictures/"+ clickedDayInt +".jpg";
 
 }
