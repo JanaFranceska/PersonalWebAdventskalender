@@ -82,7 +82,7 @@ function clickedDayAsInt({dataClient}: { dataClient: any }) {
     let clicked_dayId = jsonDataClient.dayID;
     let clicked_dayInt = clicked_dayId.substring(3);
 
-    return clicked_dayInt;
+    return parseInt(clicked_dayInt);
 }
 
 function getPictureFilePath({clickedDayInt}: { clickedDayInt: any }) {
