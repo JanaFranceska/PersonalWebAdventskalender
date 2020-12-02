@@ -1,10 +1,12 @@
 import express from 'express';
 import {log} from "util";
+import * as path from 'path';
 
 const app = express();
 const port = 3000;
 
-const location = "/Users/universitat/WebstormProjects/PersonalWebAdventskalender/server/src/pictures/";
+// when the typescript is compiled, it lands in the server/dist folder.
+const location = path.resolve(__dirname, '..', 'src', 'pictures'); 
 
 app.use(express.json());
 app.use(require('body-parser').urlencoded({extended: true}));
@@ -86,6 +88,6 @@ function clickedDayAsInt({dataClient}: { dataClient: any }) {
 }
 
 function getPictureFilePath({clickedDayInt}: { clickedDayInt: any }) {
-    return location + clickedDayInt +".jpg";
+    return path.resolve(location, clickedDayInt + ".jpg");
 
 }
