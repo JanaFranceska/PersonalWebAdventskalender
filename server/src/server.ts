@@ -4,6 +4,8 @@ import {log} from "util";
 const app = express();
 const port = 3000;
 
+const location = "/Users/universitat/WebstormProjects/PersonalWebAdventskalender/server/src/pictures/";
+
 app.use(express.json());
 app.use(require('body-parser').urlencoded({extended: true}));
 
@@ -84,6 +86,6 @@ function clickedDayAsInt({dataClient}: { dataClient: any }) {
 }
 
 function getPictureFilePath({clickedDayInt}: { clickedDayInt: any }) {
-    return "/Users/universitat/WebstormProjects/PersonalWebAdventskalender/server/src/pictures/"+ clickedDayInt +".jpg";
+    return location + clickedDayInt +".jpg";
 
 }
