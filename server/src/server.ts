@@ -30,6 +30,12 @@ app.post('/adminData',(req,res) => {
     }
 
     const fs = require('fs');
+
+    if (path == "" || !fs.existsSync(path)) {
+        res.sendStatus(404);
+        return;
+    }
+
     const contents = fs.readFileSync(path, {encoding: 'base64'});
 
     //##This is added to reduce the warnings on client side
