@@ -10,11 +10,9 @@ const location = path.resolve(__dirname, '..', 'src', 'pictures');
 
 app.use(express.json());
 app.use(require('body-parser').urlencoded({extended: true}));
+app.use(express.static(path.resolve(__dirname , '..', '..', 'public')));
 
-app.get('/', (req, res) => {
-    //TODO response with sth else?
-  res.send('Hello Adventskalendar!');
-});
+
 
 app.post('/adminData',(req,res) => {
     console.log("posted data:" + JSON.stringify(req.body));
