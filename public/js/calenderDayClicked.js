@@ -1,4 +1,4 @@
-const url='http://localhost:3000/adminData';
+const url='./adminData';
 
 $(document).ready(function() {
     $(".style_prevu_kit").click(function(event) {
