@@ -35,7 +35,7 @@ $(document).ready(function() {
             data: data,
             success: function(data){
                 //console.log('on success : '+ data);
-                $('.modal-body').html('<img src="data:image/png;base64,'+data+'" />');
+                $('.modal-body').html('<img class="img-fluid" style="width:100% !important;"  src="data:image/png;base64,'+data+'" />');
                 $('#empModal').modal('show');
                 console.log($('#empModal'));
 

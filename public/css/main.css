@@ -3,9 +3,11 @@
     margin: 0px !important;
 }
 .header {
+    width: 700px;
+    height: 100px;
     background: rgba(66,105,91,1);
     position: absolute;
-    left: 720px;
+    left: 220px;
     top: 0px;
 }
 
@@ -17,21 +19,9 @@
     position: absolute;
     top: 0px;
     left: 0px;
-    overflow: hidden;
+
 }
-.v38_9 {
-    width: 421px;
-    height: 41px;
-    /*background: url("../images/v38_9.png");*/
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 1;
-    position: absolute;
-    top: 950px;
-    left: 75px;
-    overflow: hidden;
-}
+
 .v2_140 {
     width: 111px;
     color: rgba(255,255,255,1);
@@ -76,10 +66,24 @@
     background-position: center center;
     background-size: cover;
     opacity: 1;
-    position: absolute;
+    position: relative;
     top: 0px;
-    left: 200px;
+    left: 0px;
 }
+
+
+@media only screen and (max-width: 1000px) {
+
+    .v16_77 {
+        width: 700px;
+        height: 2000px;
+    }
+
+
+
+}
+
+
 
 .style_prevu_kit
 {
@@ -93,7 +97,7 @@
     width: 154px;
     height: 154px;
     top: 200px;
-    left: 200px;
+    left: 100px;  /*// geändert */
     right: 200px;
     position: relative;
     -webkit-transition: all 200ms ease-in;
@@ -106,6 +110,11 @@
     transform: scale(1);
 
 }
+
+
+
+
+
 .style_prevu_kit:hover
 {
     box-shadow: 0px 0px 150px #000000;
@@ -467,3 +476,24 @@
     top: 0px;
     left: 11px;
 }
+
+.modal {
+    text-align: center;
+}
+
+.modal-dialog {
+    height: 80% !important;
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.modal-content {
+    overflow:visible;
+}
+
+.modal-body {
+    height: 80%;
+    overflow: auto;
+}
+
